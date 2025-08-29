@@ -17,21 +17,21 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            # 1 - Configura a checagem do repositorio
+            # I - Checkout do repositorio
             - name: Checkout repository
               uses: actions/checkout@v3
             
-            # 2 - Configura o GitHub Pages
+            # II - Configurando o Pages
             - name: Setup Pages
               uses: actions/configure-pages@v5
 
-            # 3 - Faz upload do artefato (nesse caso o proprio index.html)
+            # III - Upload do artefato
             - name: Upload Artifact
               uses: actions/upload-pages-artifact@v3
               with:
                 path: .
 
-            # 4 - Faz o deploy do GitHub Pages
+            # IV - Deploy no Pages
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4
